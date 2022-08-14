@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class DepositCalculator {
     double random(double value, int places) {
-        double ScaLe= Math.pow(10, places);
+        double ScaLe = Math.pow(10, places);
 
-        return Math.round(value*ScaLe)/ScaLe;
+        return Math.round(value * ScaLe) / ScaLe;
     }
 
     double calculateComplexPercent(double a, double y, int d) {
@@ -23,13 +23,13 @@ public class DepositCalculator {
         double outDoubleVar = 0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите сумму вклада в рублях:") ;
+        System.out.println("Введите сумму вклада в рублях:");
         int amount = scanner.nextInt();
-        System.out.println("Введите срок вклада в годах:") ;
+        System.out.println("Введите срок вклада в годах:");
         period = scanner.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
-        if (action ==1 ) {
+        if (action == 1) {
             outDoubleVar = calculateSimplePercent(amount, 0.06, period);
         } else if (action == 2) {
             outDoubleVar = calculateComplexPercent(amount, 0.06, period);
@@ -39,5 +39,7 @@ public class DepositCalculator {
 
     public static void main(String[] args) {
         new DepositCalculator().giveInfo();
+
+
     }
 }
